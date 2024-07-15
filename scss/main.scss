@@ -3,15 +3,24 @@
 // @import "layout";
 
 // For Loop exeercise
-$colors: (
-  1: red,
-  2: green,
-  3: blue,
-  4: orange,
-);
+// $colors: (
+//   1: red,
+//   2: green,
+//   3: blue,
+//   4: orange,
+// );
 
-@for $i from 1 through 4 {
-  .paragraph-#{$i} {
-    background-color: map-get($colors, $i);
+// @for $i from 1 through 4 {
+//   .paragraph-#{$i} {
+//     background-color: map-get($colors, $i);
+//   }
+// }
+
+// Each Loop exercise
+$colors: red green blue orange;
+
+@each $color in $colors {
+  .paragraph-#{$color} {
+    background-color: $color;
   }
 }
