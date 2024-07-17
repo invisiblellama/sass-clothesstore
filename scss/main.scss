@@ -1,47 +1,13 @@
-// @import "base";
-// @import "components";
-// @import "layout";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
 
-// For Loop exeercise
-// $colors: (
-//   1: red,
-//   2: green,
-//   3: blue,
-//   4: orange,
-// );
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/slideshow";
+@import "layout/products";
 
-// @for $i from 1 through 4 {
-//   .paragraph-#{$i} {
-//     background-color: map-get($colors, $i);
-//   }
-// }
-
-// Each Loop exercise
-// $colors: red green blue orange;
-
-// @each $color in $colors {
-//   .paragraph-#{$color} {
-//     background-color: $color;
-//   }
-// }
-
-// If exercise
-// h1 {
-//   @if (2 < 4) {
-//     color: red;
-//   }
-// }
-
-@mixin headingSize($size) {
-  @if ($size == large) {
-    font-size: 45px;
-  } @else if($size == medium) {
-    font-size: 30px;
-  } @else {
-    font-size: 15px;
-  }
-}
-
-h1 {
-  @include headingSize(small);
-}
+@import "components/logo";
+@import "components/heading";
+@import "components/dropdown";
+@import "components/button";
