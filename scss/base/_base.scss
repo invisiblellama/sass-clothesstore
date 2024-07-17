@@ -6,6 +6,12 @@
 
 html {
   font-size: 62.5%; // decrease default font size to 10px equivalent
+  @include response(md) {
+    font-size: 56.25%;
+  }
+  @include response(sm) {
+    font-size: 50%;
+  }
 }
 
 .container {
